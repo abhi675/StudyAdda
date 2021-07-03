@@ -1,0 +1,469 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>StudyAdda.</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <!-- ======= Header ======= -->
+  <div>
+  <header id="header" class="fixed-top">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-xl-10 d-flex align-items-center">
+          <h1 class="logo mr-auto"><a href="#header">StudyAdda<span>.</span></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class="active"><a href="#header">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#courses">Courses</a></li>
+              <li><a href="#Reviews">Reviews</a></li>
+              <li><a href="#team">Faculty</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav><!-- .nav-menu -->
+
+
+        </div>
+      </div>
+
+    </div>
+   
+  </header>
+  
+  </div>
+
+
+ 
+
+ 
+  
+ 
+
+  
+  
+   
+  <section id="hero" class="d-flex align-items-center">
+
+   
+
+    <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <div class="row">
+            {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show mb-0" role="alert">
+              {{message}}.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+            <div class="col-xl-5">
+              <h1>StudyAdda</h1>
+              <h2>Join us for better education at very low price</h2>
+              <a href="#courses" class="btn-get-started scrollto">Buy now</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+ 
+  <main id="main">
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row no-gutters">
+          <div class="content col-xl-5 d-flex align-items-stretch">
+            <div class="content">
+              <h3>StudyAdda</h3>
+              <p>
+                Gives you really good quality content for your education with 24x7 hours interrogation facilty with ours
+                expertise at very low price.
+              </p>
+              <a href="#contact" class="about-btn"><span>Contact Us</span> <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+          <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <img src="{% static 'img/about.jpg' %}" class="img-fluid" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    
+    <section id="services" class="services section-bg ">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="icofont-computer"></i>
+
+              <p>24x7 hours interrogation facilty with our expertise.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="icofont-chart-bar-graph"></i>
+
+              <p>Quality content at very cheap price.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <i class="icofont-image"></i>
+
+              <p>Will provide certification after completion of course</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <i class="icofont-settings"></i>
+
+              <p>All time accessibility facilty</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section id="courses" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Courses</h2>
+
+        </div>
+
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          {% for course in courses %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{course.image.url}}" width="400" height="300" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>{{course.courseName}}</h4>
+
+                <div class="portfolio-links">
+
+
+                  <a href="payment/{{course.price}}/{{course.courseName}}" title="More Details"><i
+                      class="fas fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+      </div>
+    </section>
+
+
+
+
+    <section id="Reviews" class="testimonials">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Reviews</h2>
+
+        </div>
+      </div>
+
+      <div class="container-fluid">
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="owl-carousel testimonials-carousel">
+
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Saul Goodman</h3>
+
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Really good content provided by the StudyAdda and faculty members are really helpful and courteous.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                   I would recommend to all the beginner to start their learning with StudyAdda because they provide really helpful content and their team members are really good.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+           
+
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    I also started my learning from StudyAdda and it was really helpful and i want to say thanks to them.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                  <h3>John Larson</h3>
+
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  StudyAdda is really good website for beginner who wants to start their learning as a beginner. Content was really helpful for me.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Our Team</h2>
+
+        </div>
+
+        <div class="row">
+          {% for faculty in faculties %}
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{faculty.image.url}}" class="img-fluid"  alt="">
+                <div class="social">
+                  <a href="{{faculty.instagram}}"><i class="icofont-instagram"></i></a>
+                  <a href="{{faculty.linkedin}}"><i class="icofont-linkedin"></i></a>
+                  <a href="{{faculty.github}}"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>{{faculty.facultyName}}</h4>
+                <span>{{faculty.profession}}</span>
+              </div>
+            </div>
+          </div>
+
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p>Alok Nagar, Adhartal, Jabalpur</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>studyadda@gmail.com<br>abhisheksingh82656@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="{% url 'index' %}" method="post" role="form">
+              {% csrf_token %}
+              <div class="form-row">
+                <div class="col form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                    data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                  data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                  data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+
+              <div class="text-center"><button type="submit" class="btn btn-danger">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+
+
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">StudyAdda.</span>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

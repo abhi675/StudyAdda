@@ -1,0 +1,209 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+    
+
+
+  
+
+
+
+
+    
+    <div class="container">
+        <main>
+          <div class="py-5 text-center">
+            
+            <h2><a href="{% url 'index' %}">StudyAdda.</a></h2>
+          
+          </div>
+      
+          <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+          </div>
+            <div class="col-md-7 col-lg-8">
+              <h4 class="mb-3">Personal Information</h4>
+              <h4 class="mb-3 text-primary">Your selected course - <strong> {{course}} </strong></h4>
+              <form action='' class="needs-validation" novalidate="" method="post">
+                {% csrf_token %}
+                <div class="row g-3">
+                  {% for message in messages %}
+                  <div class="alert alert-warning d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      {{message}}
+                    </div>
+                  </div>
+                  {% endfor %}
+                  <div class="col-12">
+                    <label for="username" class="form-label">Name</label>
+                    <div class="input-group has-validation">
+                     
+                      <input type="text" class="form-control" id="username" name='name' placeholder="Name" required="">
+                    <div class="invalid-feedback">
+                        Your name is required.
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-muted">(Necessary)</span></label>
+                    <input type="email" class="form-control" 
+                    name='email' id="email" placeholder="you@example.com" required="">
+                    <div class="invalid-feedback">
+                      Please enter your email
+                    </div>
+                  </div>
+      
+                  
+               
+            
+                </div>
+      
+                <hr class="my-4">
+      
+      
+      
+                <h4 class="mb-3">Payment</h4>
+      
+                <div class="my-3">
+                  <div class="form-check">
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+                    <label class="form-check-label" for="credit">Credit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+                    <label class="form-check-label" for="debit">Debit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+                    <label class="form-check-label" for="paypal">PayPal</label>
+                  </div>
+                </div>
+      
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Name on card</label>
+                    <input type="text" class="form-control" 
+                    name='nameoncard' id="cc-name" placeholder="" required="">
+                    <small class="text-muted">Full name as displayed on card</small>
+                    <div class="invalid-feedback">
+                      Name on card is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-6">
+                    <label for="cc-number" class="form-label">Credit card number</label>
+                    <input type="text" class="form-control"
+                    id="cc-number" name='creditcardnumber' placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Credit card number is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label">Expiration</label>
+                    <input type="date" class="form-control" 
+                    id="cc-expiration" name='date'  required="">
+                    <div class="invalid-feedback">
+                      Expiration date required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" 
+                    id="cc-cvv" name='cvv' placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <label for="price" class="form-label">Price in Rs.</label>
+                    <input type="text" class="form-control" 
+                    id="price" name='price' value="{{price}}" required="">
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+
+                </div>
+      
+                <hr class="my-4">
+      
+
+                
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="same-address" required>
+                    <label class="form-check-label" for="same-address">Are you agree with your given information</label>
+                  </div>
+
+                  <hr class="my-4">
+
+
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+              </form>
+            </div>
+          </div>
+        </main>
+      
+      
+      </div>
+
+          <hr class="my-4">
+
+      
+
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">StudyAdda.</span>
+    </div>
+  </footer>
+
+   <script>
+      (function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+  </script>
+ 
+
+
+          <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      
+            <script src="form-validation.js"></script>
+        
+          
+
+
+</body>
+</html>
